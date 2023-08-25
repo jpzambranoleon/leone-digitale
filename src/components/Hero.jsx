@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BgImg from "../assets/images/bg-blob.png";
 
 export default function Hero() {
   const bookBtn = () => {
@@ -26,10 +27,16 @@ export default function Hero() {
                 className="hero-content__text__btns__continue"
                 to="/"
               >
-                Continue &nbsp; <i className="fa-solid fa-circle-check"></i>
+                Continue &nbsp; <i className="fa-solid fa-circle-check" />
+              </Link>
+              <Link className="hero-content__text__btns__learn-more" to="/">
+                Learn More &nbsp; <i className="fa-solid fa-angle-right" />
               </Link>
             </div>
           </div>
+
+          {/* img */}
+          <img src={BgImg} className="hero-content__bg-img" />
         </div>
       </div>
     </section>
