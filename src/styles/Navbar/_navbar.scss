@@ -1,0 +1,108 @@
+@use "../global" as *;
+
+.navbar {
+  max-width: 133rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.7rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 99999;
+  margin: 0 auto;
+
+  .navbar-left {
+    display: flex;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      
+      .logo-text {
+        color: $text-black;
+        font-size: $h4-size;
+        font-family: $titles-font;
+        text-decoration: none;
+        margin-right: 12px;
+      }
+
+      .logo-img {
+        height: 42px;
+        width: 42px;
+      }
+    }
+
+    .logo {
+      color: $text-black;
+      font-size: $h4-size;
+      font-family: $titles-font;
+      text-decoration: none;
+    }
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    gap: 2.1rem;
+
+    a {
+      font-size: $p-size;
+      font-family: $text-font;
+      font-weight: 500;
+      color: $text-black;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      
+      &:hover {
+        color: $text-blue;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    gap: 2.5rem;
+    font-size: $p-size;
+    font-family: $text-font;
+    font-weight: 500;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    &__get-quote {
+      background-color: $text-blue;
+      color: white;
+      padding: 1.5rem 3rem;
+      border-radius: 3px;
+      box-shadow: 0 10px 15px 0 rgba(62 79 227 / 35%);
+      transition: all 0.3s;
+      
+      &:hover {
+        box-shadow: 0 10px 15px 0 rgba(62 79 227 / 50%);
+        background-color: #147efb;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
